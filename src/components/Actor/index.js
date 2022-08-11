@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 //Styles
 import { Wrapper, Image } from "./Actor.styles";
 
@@ -9,5 +10,12 @@ const Actor = ({ name, character, imageUrl}) => (
         <p>{character}</p>
     </Wrapper>
 )
+
+// Handy way of validating props when developing
+Actor.propTypes = {
+    name: PropTypes.string, 
+    character: PropTypes.string,
+    imameUrl: PropTypes.string,
+}
 
 export default Actor;
